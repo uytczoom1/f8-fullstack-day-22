@@ -56,7 +56,9 @@ function getDaysInMonth(month) {
 Lesson 3: Even/Odd Check	
 
 function checkEvenOdd(n) {
-    return n % 2 === 0 ? "Even" : "Odd";
+    const isEven = (n % 2 === 0);
+    const result = isEven ? "Even" : "Odd";
+    return result;
 }
 
 
