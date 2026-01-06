@@ -36,16 +36,16 @@ function getDaysInMonth(month) {
     case 8:
     case 10:
     case 12:
-      return `31 days`;
+      return `31`;
 
     case 4:
     case 6:
     case 9:
     case 11:
-      return `30 days`;
+      return `30`;
 
     case 2:
-      return `28 days`;
+      return `28`;
 
     default:
       return `Invalid month. Please enter a number from 1 to 12.`;
@@ -55,11 +55,13 @@ function getDaysInMonth(month) {
 
 Lesson 3: Even/Odd Check	
 
-function checkEvenOdd(n) {
-    const isEven = (n % 2 === 0);
-    const result = isEven ? "Even" : "Odd";
-    return result;
+function isEvenNumber(n) {
+  return n % 2 === 0;
 }
+
+// Check the results
+console.log(isEvenNumber(4)); // Result: true
+console.log(isEvenNumber(7)); // Result: false
 
 
 Lesson 4: Movie Ticket Price Calculation	
