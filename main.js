@@ -1,24 +1,29 @@
 Lesson 1: Academic Performance Classification
     
-function classifyScore(score) {
+function getStudentLevel(score) {
   if (score < 0 || score > 10) {
-    console.log("Invalid score. Please enter a score between 0 and 10.");
-    return;
+    return `Invalid score. Please enter a score between 0 and 10.`;
   }
 
   if (score >= 9) {
-    console.log("Excellent");
+    return `Excellent`;
   } else if (score >= 8) {
-    console.log("Very Good");
+    return `Very Good`;
   } else if (score >= 6.5) {
-    console.log("Good");
+    return `Good`;
   } else if (score >= 5) {
-    console.log("Average");
+    return `Average`;
   } else {
-    console.log("Weak");
+    return `Weak`;
   }
 }
-
+// Test cases
+classifyPerformance(9.5); // Output: Excellent
+classifyPerformance(8.2); // Output: Very Good
+classifyPerformance(7);   // Output: Good
+classifyPerformance(5.5); // Output: Average
+classifyPerformance(4);   // Output: Weak
+classifyPerformance(12);  // Output: Invalid score. Please enter a score between 0 and 10.
 
 Lesson 2: Days in a Month Calculator
 
@@ -31,44 +36,45 @@ function getDaysInMonth(month) {
     case 8:
     case 10:
     case 12:
-      console.log("31 days");
-      break;
+      return `31 days`;
 
     case 4:
     case 6:
     case 9:
     case 11:
-      console.log("30 days");
-      break;
+      return `30 days`;
 
     case 2:
-      console.log("28 days");
-      break;
+      return `28 days`;
 
     default:
-      console.log("Invalid month. Please enter a number from 1 to 12.");
+      return `Invalid month. Please enter a number from 1 to 12.`;
   }
 }
 
 
 Lesson 3: Even/Odd Check	
 
-const result = n % 2 === 0 ? "Even" : "Odd";
+function checkEvenOdd(n) {
+    return n % 2 === 0 ? "Even" : "Odd";
+}
 
 
 Lesson 4: Movie Ticket Price Calculation	
 
-let age = 10;
-const basePrice = 100000;
-const ticketPrice = age < 13 ? basePrice * 0.5 : basePrice;
+function calculateTicketPrice(age) {
+    const basePrice = 100000;
+    return age < 13 ? basePrice * 0.5 : basePrice;
+}
 
-console.log(ticketPrice);
+console.log(calculateTicketPrice(10));
 
 
 Lesson 5: Temperature Conversion	
 
-function celsiusToFahrenheit(celsius) {
-  return celsius * 1.8 + 32;
+function celsiusToFahrenheit(celsiusDegree) {
+  const fahrenheitDegree = celsiusDegree * 1.8 + 32;
+  return fahrenheitDegree;
 }
 
 console.log(celsiusToFahrenheit(25));
